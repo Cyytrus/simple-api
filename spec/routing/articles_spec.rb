@@ -8,4 +8,10 @@ RSpec.describe '/articles/routes' do
       route_to('articles#index', page: { 'number' => '3' })
     )
   end
+
+  it ' routes articles/id to articles#show' do
+    expect(get '/articles/1').to(
+      route_to('articles#show', id: '1')
+    )
+  end
 end
