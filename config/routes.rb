@@ -1,5 +1,3 @@
 Rails.application.routes.draw do
-  resources :articles do
-    resources :index, :show
-  end
+  resources :articles, only: %i[index]
 end
